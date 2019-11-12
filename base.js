@@ -5,4 +5,11 @@ const mod = x => y => ((y % x) + x) % x;
 const merge = o1 => o2 => Object.assign({}, o1, o2);
 const map = f => xs => xs.map(f);
 
-module.exports = { dropFirst, dropLast, rnd, mod, merge, map };
+module.exports = {
+  dropFirst,
+  dropLast,
+  rnd,
+  mod,
+  merge,
+  map
+};

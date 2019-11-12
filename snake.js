@@ -7,10 +7,10 @@ const SOUTH = { x: 0, y: 1 };
 const EAST = { x: 1, y: 0 };
 const WEST = { x: -1, y: 0 };
 
-// point equations
+// Point operations
 const pointEq = p1 => p2 => p1.x == p2.x && p1.y == p2.y;
 
-// booleans
+// Booleans
 const willEat = state => pointEq(nextHead(state))(state.apple);
 const willCrash = state => state.snake.find(pointEq(nextHead(state)));
 const validMove = move => state =>
@@ -34,13 +34,13 @@ const nextSnake = state =>
     ? [nextHead(state)].concat(state.snake)
     : [nextHead(state)].concat(dropLast(state.snake));
 
-//Randomness
+// Randomness
 const rndPos = table => ({
   x: rnd(0)(table.cols - 1),
   y: rnd(0)(table.rows - 1)
 });
 
-// Initial State
+// Initial state
 const initialState = () => ({
   cols: 20,
   rows: 14,

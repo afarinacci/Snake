@@ -1,6 +1,7 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
+// Mutable State
 let state = initialState();
 
 // Position helpers
@@ -45,22 +46,22 @@ window.addEventListener('keydown', e => {
     case 'w':
     case 'h':
     case 'ArrowUp':
-      state = enqueue(state, [NORTH]);
+      state = enqueue(state, NORTH);
       break;
     case 'a':
     case 'j':
     case 'ArrowLeft':
-      state = enqueue(state, [WEST]);
+      state = enqueue(state, WEST);
       break;
     case 's':
     case 'k':
     case 'ArrowDown':
-      state = enqueue(state, [SOUTH]);
+      state = enqueue(state, SOUTH);
       break;
     case 'd':
     case 'l':
     case 'ArrowRight':
-      state = enqueue(state, [EAST]);
+      state = enqueue(state, EAST);
       break;
   }
 });
