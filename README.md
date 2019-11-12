@@ -1,3 +1,3 @@
 # Snake
 
-Snake game using functional programming
+freecodecamp.org Snake game using functional programming tutorial
